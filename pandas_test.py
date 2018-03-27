@@ -48,6 +48,11 @@ print(np.log(population))
 
 print("=== MANIPULATING DATA BY LAMBDA ====")
 print(population.apply(lambda val: val > 1000000))
+def bin(val):
+    if val > 100:
+        return 1
+    return 0
+print(population.apply(lambda val : bin(val)))
 
 print("=== MANIPULATING DATA BY THEM SELF ====")
 cities['Area square miles'] = pd.Series([46.87, 176.53, 97.92,100.0])
